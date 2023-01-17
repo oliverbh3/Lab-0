@@ -1,7 +1,7 @@
 ---
 title: "Lab 0 - Hello R!"
-author: "[INSERT NAME]"
-date: "[INSERT DATE]"
+author: "Oliver Hess"
+date: "January 17th, 2023"
 format: pdf
 editor: visual
 ---
@@ -17,7 +17,15 @@ library(datasauRus)
 
 ## Exercise 1
 
-(Type your answer to exercise #1 here. Note this exercise doesn't require any R code.)
+(Type your answer to exercise #1 here. Note this exercise doesn't require any R code.
+
+```{r}
+View(datasaurus_dozen)
+```
+
+1,846 rows, 3 columns
+
+13 variables
 
 ## Exercise 2
 
@@ -63,10 +71,8 @@ Conclude with some more narrative, if needed.
 
 ## Exercise 4
 
-(Add a labeled code chunk and narrative here. Insert code chunks using the "insert chunk" button (a green C with a +).
-Alternatively, use CMD + OPTION + I (Mac) or CTRL + ALT + I (Windows).)
+(Add a labeled code chunk and narrative here. Insert code chunks using the "insert chunk" button (a green C with a +). Alternatively, use CMD + OPTION + I (Mac) or CTRL + ALT + I (Windows).)
 
 ## Exercise 5
 
-(Add a labeled code chunk and narrative here. Insert code chunks using the "insert chunk" button (a green C with a +).
-Alternatively, use CMD + OPTION + I (Mac) or CTRL + ALT + I (Windows).)
+(Add a labeled code chunk and narrative here. Insert code chunks using the "insert chunk" button (a green C with a +). Alternatively, use CMD + OPTION + I (Mac) or CTRL + ALT + I (Windows).)
