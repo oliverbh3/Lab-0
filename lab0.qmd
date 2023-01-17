@@ -63,7 +63,7 @@ Correlation between x and y is -0.0645
 #| label: plot-circle
 circle_data <- datasaurus_dozen %>%
   filter(dataset == "circle") 
-ggplot(data = circle_data, mapping = aes(x = y, y = x)) + 
+ggplot(data = circle_data, mapping = aes(x = x, y = y)) + 
   geom_point()
 
 circle_data_r <- circle_data %>% 
@@ -80,6 +80,8 @@ Some more narrative can go here.
 ```
 
 Conclude with some more narrative, if needed.
+
+From my limited stats knowledge, the r value is how close the set of points is to a linear relationship. Clearly, a circle and a dinosaur image are not the most linear datasets. Therefore, the values stray from 1... but that's all I can explain so far.
 
 ## Exercise 4
 
