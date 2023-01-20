@@ -113,3 +113,14 @@ star_data %>%
 ## Exercise 5
 
 (Add a labeled code chunk and narrative here. Insert code chunks using the "insert chunk" button (a green C with a +). Alternatively, use CMD + OPTION + I (Mac) or CTRL + ALT + I (Windows).)
+
+```{r}
+ggplot(datasaurus_dozen, aes(x = x, y = y, color = dataset))+
+  geom_point()+
+  facet_wrap(~ dataset, ncol = 3) +
+  theme(legend.position = "none")
+
+datasaurus_dozen %>% 
+  group_by(dataset) %>% 
+  summarize(r = cor(x, y))
+```
