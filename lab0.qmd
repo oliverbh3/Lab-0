@@ -20,7 +20,7 @@ library(datasauRus)
 (Type your answer to exercise #1 here. Note this exercise doesn't require any R code.
 
 ```{r}
-View(datasaurus_dozen)
+View(datasaurus_dozen) 
 ```
 
 1,846 rows, 3 columns
@@ -28,6 +28,11 @@ View(datasaurus_dozen)
 13 variables
 
 ## Exercise 2
+
+```{r}
+#what if i do this
+
+```
 
 (The answer for this exercise is given below, but you should clean up the narrative so it only includes what you want to turn in.)
 
