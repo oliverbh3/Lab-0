@@ -44,7 +44,10 @@ datasaurus_dozen %>%
 First, let's plot the data in the dino dataset (we will cover **ggplot2** in much more depth next week):
 
 ```{r}
-#| label: plot-dino
+#| label: dino graph
+#| fig-height: 5
+#| fig-width: 5
+
 dino_data <- datasaurus_dozen %>%
   filter(dataset == "dino")
 
@@ -55,7 +58,7 @@ ggplot(data = dino_data, mapping = aes(x = x, y = y)) +
 Next calculate the correlation between `x` and `y` in this dataset.
 
 ```{r}
-#| label: cor-dino
+
 dino_data %>%
   summarize(r = cor(x, y))
 
@@ -72,6 +75,9 @@ Correlation between x and y is -0.06447185
 
 ```{r}
 #| label: plot-circle
+#| fig-height: 5
+#| fig-width: 5
+
 circle_data <- datasaurus_dozen %>%
   filter(dataset == "circle") 
 ggplot(data = circle_data, mapping = aes(x = x, y = y)) + 
@@ -100,6 +106,9 @@ From my limited stats knowledge, the r value is how close the set of points is t
 (Add a labeled code chunk and narrative here. Insert code chunks using the "insert chunk" button (a green C with a +). Alternatively, use CMD + OPTION + I (Mac) or CTRL + ALT + I (Windows).)
 
 ```{r}
+#| label: star_graph
+#| fig-height: 5
+#| fig-width: 5
 star_data <- datasaurus_dozen %>%
   filter(dataset == "star") 
 
@@ -115,6 +124,11 @@ star_data %>%
 (Add a labeled code chunk and narrative here. Insert code chunks using the "insert chunk" button (a green C with a +). Alternatively, use CMD + OPTION + I (Mac) or CTRL + ALT + I (Windows).)
 
 ```{r}
+#| label: ex2-chunk-label
+#| fig-height: 10
+#| fig-width: 6
+
+
 ggplot(datasaurus_dozen, aes(x = x, y = y, color = dataset))+
   geom_point()+
   facet_wrap(~ dataset, ncol = 3) +
