@@ -20,17 +20,22 @@ library(datasauRus)
 (Type your answer to exercise #1 here. Note this exercise doesn't require any R code.
 
 ```{r}
-View(datasaurus_dozen) 
+view(datasaurus_dozen) 
+
+datasaurus_dozen %>% 
+  count(dataset) 
+
+# using count(dataset) to see the indivudiaul variables, but this can be done with the distinct() function
 ```
 
 1,846 rows, 3 columns
 
-13 variables
+13 variables (away, bullseye, circle, dino, dots, h_lines, high_lines, slant_down, slant_up, star, wide_lines, v_lines, x_shape)
 
 ## Exercise 2
 
 ```{r}
-#what if i do this
+# I'm not sure how to delete a chunk... sorry
 
 ```
 
@@ -42,6 +47,7 @@ First, let's plot the data in the dino dataset (we will cover **ggplot2** in muc
 #| label: plot-dino
 dino_data <- datasaurus_dozen %>%
   filter(dataset == "dino")
+
 ggplot(data = dino_data, mapping = aes(x = x, y = y)) + 
   geom_point()
 ```
@@ -50,13 +56,13 @@ Next calculate the correlation between `x` and `y` in this dataset.
 
 ```{r}
 #| label: cor-dino
-dino_r_value <- dino_data %>%
+dino_data %>%
   summarize(r = cor(x, y))
 
-# the r value is -0.0645
+# the r value is -0.06447185	
 ```
 
-Correlation between x and y is -0.0645
+Correlation between x and y is -0.06447185
 
 ## Exercise 3
 
@@ -71,7 +77,7 @@ circle_data <- datasaurus_dozen %>%
 ggplot(data = circle_data, mapping = aes(x = x, y = y)) + 
   geom_point()
 
-circle_data_r <- circle_data %>% 
+circle_data %>% 
   summarize(r = cor(x,y))
 ```
 
@@ -81,6 +87,7 @@ Some more narrative can go here.
 #| label: cor-circle
 
 # I calculated the r value in the previous chunk
+# r for circle_data is -0.06834336
 
 ```
 
